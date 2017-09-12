@@ -40,6 +40,7 @@ if ( !is_multisite() ) {
 	die();
 }
 
+global $wp_query; // fix warning message
 // Fix for page title
 $wp_query->is_404 = false;
 

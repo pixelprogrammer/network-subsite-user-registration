@@ -214,6 +214,8 @@ class NSUR {
 
                             foreach(  $original_error->get_error_messages( $code ) as $message ){  
 
+                                    $user_id = 0; // default value to squash the warning messages
+                                    
                                     // Find if user exists based on username from the signup form and collect their email address
                                     if( $code == 'user_name' && $message == __( 'Sorry, that username already exists!') ){                    
                                             $user = get_user_by( 'login', $submitted_user_name );
